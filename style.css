@@ -1,0 +1,49 @@
+"Now add CSS styling to the HTML structure. Use these exact values:
+COLOURS:
+ Background: #[F3EDE5] alternating #[212C16] 
+ Primary text: #[212C16]  alternating #[F3EDE5]
+ Accent / brand colour: #[563D1A] 
+ Button background: #[212C16]  Button text: #[F3EDE5] alternating on different backgrounds.
+ Card background: #[212C16] Footer background: #[212C16] 
+TYPOGRAPHY (import from Google Fonts):
+ Headings: [Inria Serif Bold] — H1: [40]px bold, [Intel One Mono] H2:[28]px Light.
+ Body: [Inria Sans] — [10]px, line-height [12]
+ Navigation links: [20]px, [40 spacing between titles], [0% letter spacing]
+ Button label: [30]px.
+SPACING AND LAYOUT:
+ Content container max-width: [10]px, centred with auto margins
+ Section vertical padding: [25]px top and bottom
+ Card padding: [50]px Card gap: [15]px
+ Navigation bar height: [8]px
+BUTTONS: border-radius [170]px, padding [5]px [50]px"
+
+"Make this site responsive and accessible.
+
+BREAKPOINTS:
+ Tablet: below [768]px
+ Mobile: below [480]px
+
+NAVIGATION:
+ Below [768]px: replace the horizontal nav links with a hamburger
+ menu icon that toggles a full-width dropdown menu. Menu must be
+ operable by keyboard (Tab and Enter).
+
+LAYOUT:
+ [Hero section] grid: [2] columns on desktop becomes [4] column below [1035]px width of cards and spacing, [classes section] Cards stack vertically with [50]px gap, [2 column] below [950]px height for this section with image on the left [630 width], [900 height] with padding around [15]px, text in the middle right section, H2 title first [The Pilates Garden], H1 [About Our Pilates Style], then small paragraph [10]px underneath and button [10]px  underneath, [Location section:] going into a [2] column with image of google map location on the right [15]px padding around background: [width1450], [height 450] and text on the left, H1 [Location] with spacing and padding [15]px, H2 [Gold Coast,Australia] underneath [15]px spacing then a small paragraph text [15]px underneath and two buttons [Book Now], [Learn More], then [Location Section:] grid: 1 column with four cards of text and contact information and logo underneath [The Pilates Garden]. Footer section: logo on left and text of information.
+
+
+
+TYPOGRAPHY:
+ H1 scales from [size]px desktop to [size]px mobile.
+ Body text remains at minimum 16px on all screen sizes.
+
+ACCESSIBILITY:
+ Ensure all body text meets a 4.5:1 contrast ratio against its
+ background (WCAG AA). Add descriptive alt text to every image —
+ describe what the image shows, not the filename. Use semantic
+ landmarks: <nav>, <main>, <header>, <footer>. All interactive
+ elements (links, buttons, menu) must be reachable and usable via
+ keyboard alone."
+
+
+
