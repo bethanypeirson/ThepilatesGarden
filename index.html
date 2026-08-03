@@ -21,7 +21,7 @@
     </button>
     <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="#home">Home</a>
-      <a href="#about">About</a>
+      <a href="about.html">About</a>
       <a href="#classes">Classes</a>
       <a href="#pricing">Memberships/Pricing</a>
       <a href="#contact">Contact</a>
@@ -40,7 +40,10 @@
         <h1>MAT PILATES</h1>
         <p class="hero-sub">The Pilates Garden</p>
         <p class="hero-intro">Mat Pilates is slow, controlled strength work done at ground level — no machines, just your body, breath, and the grass beneath you. The Pilates Garden brings it outdoors, in small groups, on Gold Coast lawns.</p>
-        <a class="btn" href="#book">Book A Class</a>
+        <div class="btn-row">
+          <a class="btn btn-dark" href="#book">Book Now</a>
+          <a class="btn btn-dark" href="#learn-more">Learn More</a>
+        </div>
       </div>
       <div class="hero-image">
         <img src="hero-image.png" alt="Woman doing a seated side-stretch mat Pilates pose on a mat labelled 'Pilates Garden' in a lush green garden">
@@ -167,7 +170,7 @@
         <ul>
           <li><a href="#pricing">Memberships/Pricing</a></li>
           <li><a href="#classes">Sculpt, Sweat, Stretch, Sunset</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#learn-more">Learn More</a></li>
         </ul>
       </div>
@@ -193,7 +196,6 @@
     toggle.setAttribute('aria-expanded', String(!open));
     links.classList.toggle('open', !open);
   });
-  // Close mobile menu after a link is chosen (keeps keyboard flow tidy)
   links.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       if (window.innerWidth <= 768) {
