@@ -1,527 +1,210 @@
-:root{
-  --cream: #F3EDE5;
-  --green: #212C16;
-  --clay: #563D1A;
-  --sage: #4F5F3D;
-  --green-soft: #2B3820;
-  --max-w: 1400px;
-  --section-pad: 64px;
-  --radius-pill: 999px;
-}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pilates Garden — Mat Pilates, Gold Coast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&family=Inria+Sans:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-*{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
-body{
-  margin:0;
-  font-family:'Inria Sans', sans-serif;
-  font-weight:400;
-  font-size:18px;
-  line-height:1.6;
-  color:var(--green);
-  background:var(--cream);
-}
-img{ max-width:100%; display:block; }
-a{ color:inherit; text-decoration:none; }
-ul{ list-style:none; margin:0; padding:0; }
-.container{
-  max-width:var(--max-w);
-  margin:0 auto;
-  padding:0 24px;
-}
-h1,h2,h3{
-  font-family:'Inria Serif', serif;
-  font-weight:700;
-  margin:0;
-}
-.eyebrow{
-  font-family:'Space Mono', monospace;
-  font-size:14px;
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-}
-.btn{
-  display:inline-block;
-  font-family:'Inria Sans', sans-serif;
-  font-weight:700;
-  font-size:14px;
-  letter-spacing:0.04em;
-  text-transform:uppercase;
-  border-radius:0;
-  padding:12px 28px;
-  border:2px solid transparent;
-  cursor:pointer;
-  transition:transform .18s ease, background .18s ease, color .18s ease;
-}
-.btn:hover{ transform:translateY(-2px); }
-.btn:focus-visible{ outline:3px solid var(--clay); outline-offset:3px; }
-.btn-dark{ background:var(--green); color:var(--cream); }
-.btn-dark:hover{ background:var(--green-soft); }
-.btn-light{ background:var(--cream); color:var(--green); }
-.btn-light:hover{ background:#fff; }
-.btn-outline{ background:transparent; color:var(--cream); border-color:var(--cream); }
-.btn-outline:hover{ background:var(--cream); color:var(--green); }
-.btn-row{ display:flex; gap:14px; flex-wrap:wrap; }
+<a class="skip-link" href="#main">Skip to main content</a>
 
-.divider-label{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:18px;
-  font-family:'Space Mono', monospace;
-  font-size:14px;
-  letter-spacing:0.3em;
-  text-transform:capitalize;
-  margin-bottom:56px;
-}
-.divider-label::before,
-.divider-label::after{
-  content:"";
-  height:1px;
-  width:64px;
-  background:currentColor;
-  opacity:0.5;
-}
+<header class="site-nav">
+  <div class="container">
+    <a class="logo" href="#" aria-label="The Pilates Garden, home"><img src="pilates-garden-logo.png" alt="The Pilates Garden logo" class="logo-img"></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="#classes">Classes</a>
+      <a href="#pricing">Memberships/Pricing</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-dark" href="#book">Book Now</a>
+    </nav>
+  </div>
+</header>
 
-.skip-link{
-  position:absolute; left:-999px; top:0;
-  background:var(--green); color:var(--cream);
-  padding:12px 20px; z-index:200; border-radius:0 0 8px 0;
-}
-.skip-link:focus{ left:0; }
+<main id="main">
 
-/* ---------- NAV ---------- */
-header.site-nav{
-  background:var(--cream);
-  height:88px;
-  display:flex;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:100;
-  border-bottom:1px solid rgba(33,44,22,0.08);
-}
-.site-nav .container{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  width:100%;
-}
-.logo{
-  font-family:'Inria Serif', serif;
-  font-weight:700;
-  font-size:24px;
-  color:var(--green);
-  display:flex;
-  align-items:center;
-}
-.logo-img{ height:56px; width:auto; display:block; }
-.logo-img-footer{ height:64px; }
-.logo-img-contact{ height:80px; width:auto; margin:0 auto; }
-.logo span{ color:var(--clay); }
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:40px;
-}
-.nav-links a:not(.btn){
-  font-size:18px;
-  color:var(--sage);
-  font-weight:400;
-  letter-spacing:0;
-  padding:6px 2px;
-  border-bottom:2px solid transparent;
-  transition:border-color .18s ease, color .18s ease;
-}
-.nav-links a:not(.btn):hover,
-.nav-links a:not(.btn):focus-visible{
-  color:var(--green);
-  border-bottom-color:var(--clay);
-}
-.nav-toggle{
-  display:none;
-  background:none;
-  border:none;
-  cursor:pointer;
-  width:44px;
-  height:44px;
-  padding:8px;
-}
-.nav-toggle span{
-  display:block;
-  width:100%;
-  height:2px;
-  background:var(--green);
-  margin:6px 0;
-  transition:transform .2s ease, opacity .2s ease;
-}
-.nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(8px) rotate(45deg); }
-.nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
-.nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <p class="eyebrow">Mind . Body . Connection</p>
+        <h1>MAT PILATES</h1>
+        <p class="hero-sub">The Pilates Garden</p>
+        <p class="hero-intro">Mat Pilates is slow, controlled strength work done at ground level — no machines, just your body, breath, and the grass beneath you. The Pilates Garden brings it outdoors, in small groups, on Gold Coast lawns.</p>
+        <div class="btn-row">
+          <a class="btn btn-dark" href="#book">Book Now</a>
+          <a class="btn btn-dark" href="#learn-more">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="hero-image.png" alt="Woman doing a seated side-stretch mat Pilates pose on a mat labelled 'Pilates Garden' in a lush green garden">
+      </div>
+    </div>
+  </section>
 
-/* ---------- HERO ---------- */
-.hero{
-  background:#F3EDE5;
-  color:#184123;
-}
-.hero .container{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:64px;
-  align-items:center;
-  min-height:auto;
-  padding-top:20px;
-  padding-bottom:20px;
-  padding-left:24px;
-  padding-right:24px;
-}
-.hero-content{ max-width:520px; text-align:left; margin-left:2px; }
-.hero .eyebrow{ color:#184123; opacity:0.7; margin-bottom:8px; font-size:11px; font-weight:700; letter-spacing:0.15em; }
-.hero h1{
-  font-size:46px;
-  line-height:1;
-  margin-bottom:4px;
-  margin-left:-2px;
-  color:#184123;
-  white-space:nowrap;
-}
-.hero .hero-sub{
-  font-family:'Space Mono', monospace;
-  font-size:19px;
-  letter-spacing:0.06em;
-  text-transform:none;
-  color:#184123;
-  opacity:0.75;
-  margin-bottom:14px;
-}
-.hero-intro{
-  font-family:'Inria Sans', sans-serif;
-  font-size:13px;
-  line-height:1.5;
-  color:#184123;
-  opacity:0.75;
-  max-width:340px;
-  margin-bottom:18px;
-}
-.hero-image{
-  border-radius:0;
-  overflow:hidden;
-  width:100%;
-  max-width:600px;
-  aspect-ratio:12/7;
-  margin-left:auto;
-}
-.hero-image img{ width:100%; height:100%; object-fit:cover; }
-.hero .btn{ background:#212C16; color:var(--cream); }
-.hero .btn:hover{ background:var(--green-soft); }
+  <!-- CLASSES -->
+  <section class="classes" id="classes">
+    <div class="container">
+      <p class="divider-label">Classes</p>
+      <div class="class-grid">
 
-/* ---------- CLASSES ---------- */
-.classes{
-  background:var(--green);
-  color:var(--cream);
-  padding:20px 0 var(--section-pad);
-}
-.classes .divider-label{
-  color:var(--cream);
-  margin-bottom:46px;
-  max-width:calc(50% + 24px);
-  margin-left:auto;
-  margin-right:auto;
-}
-.classes .divider-label::before,
-.classes .divider-label::after{
-  flex:1;
-  width:auto;
-}
-.contact .divider-label{
-  max-width:calc(50% + 24px);
-  margin-left:auto;
-  margin-right:auto;
-}
-.contact .divider-label::before,
-.contact .divider-label::after{
-  flex:1;
-  width:auto;
-}
-.classes .divider-label::before,
-.classes .divider-label::after{
-  width:180px;
-}
-.contact .divider-label::before,
-.contact .divider-label::after{
-  width:180px;
-}
-.class-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
-}
-.class-card{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  text-align:center;
-}
-.class-card .img-frame{
-  width:100%;
-  aspect-ratio:4/3;
-  border-radius:0;
-  overflow:hidden;
-  background:var(--clay);
-}
-.class-card .img-frame img{ width:100%; height:100%; object-fit:cover; }
-.class-card h3{ font-size:20px; }
-.class-card p{ font-size:16px; margin:0; color:var(--cream); opacity:0.8; }
+        <article class="class-card">
+          <div class="img-frame">
+            <img src="class-sculpt.jpeg" alt="Woman doing a side plank leg lift with a dumbbell on a mat in a garden, labelled Sculpt">
+          </div>
+          <h3>Sculpt</h3>
+          <p>Slow, controlled reformer-style mat work that builds long, lean strength through the core and stabilising muscles.</p>
+        </article>
 
-/* ---------- ABOUT ---------- */
-.about{
-  background:var(--cream);
-  padding:20px 0;
-}
-.about .container{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
-  padding:20px;
-  padding-right:22px;
-}
-.about .about-image{
-  border-radius:0;
-  overflow:hidden;
-  aspect-ratio:3/4;
-  background:var(--sage);
-}
-.about .about-image img{ width:100%; height:100%; object-fit:cover; }
-.about .about-text{ text-align:center; }
-.about .about-text .eyebrow{ color:var(--clay); margin-bottom:14px; }
-.about .eyebrow-center{ text-align:center; }
-.about h2{ font-size:32px; color:var(--green); margin-bottom:22px; }
-.about p{ font-size:16px; color:var(--sage); margin-bottom:32px; }
+        <article class="class-card">
+          <div class="img-frame">
+            <img src="class-sweat.jpeg" alt="Woman in a plank knee-drive position on a mat in a garden, labelled Sweat">
+          </div>
+          <h3>Sweat</h3>
+          <p>An up-tempo blend of Pilates and conditioning intervals designed to lift the heart rate without leaving the mat.</p>
+        </article>
 
-/* ---------- LOCATION ---------- */
-.location{
-  background:var(--green);
-  color:var(--cream);
-  padding:20px 0;
-}
-.location .container{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:64px;
-  align-items:center;
-  padding:20px;
-}
-.location .eyebrow{ color:#C9B79A; margin-bottom:14px; }
-.location h2{ font-size:44px; margin-bottom:8px; }
-.location h3{
-  font-family:'Space Mono', monospace;
-  font-size:18px;
-  font-weight:400;
-  letter-spacing:0.04em;
-  color:#C9B79A;
-  margin-bottom:24px;
-}
-.location p{ font-size:16px; margin-bottom:36px; color:#DCD4C6; }
-.location .btn-row{ display:flex; gap:18px; flex-wrap:wrap; }
-.map-frame{
-  border-radius:0;
-  overflow:hidden;
-  aspect-ratio:16/11;
-  border:0;
-}
-.map-frame iframe{ width:100%; height:100%; border:0; display:block; }
+        <article class="class-card">
+          <div class="img-frame">
+            <img src="class-stretch.jpeg" alt="Woman in a seated side stretch on a mat in a garden, labelled Stretch">
+          </div>
+          <h3>Stretch</h3>
+          <p>A slower, breath-led class focused on mobility, release, and lengthening tight muscles after a busy week.</p>
+        </article>
 
-/* ---------- CONTACT ---------- */
-.contact{
-  background:var(--cream);
-  padding:20px 0 var(--section-pad);
-  text-align:center;
-}
-.contact-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:32px;
-  margin-bottom:64px;
-}
-.contact-grid h3{
-  font-size:20px;
-  color:var(--green);
-  margin-bottom:10px;
-}
-.contact-grid p{ font-size:16px; color:var(--sage); margin:0; }
-.contact .logo-center{
-  font-family:'Inria Serif', serif;
-  font-weight:700;
-  font-size:28px;
-  color:var(--clay);
-}
+        <article class="class-card">
+          <div class="img-frame">
+            <img src="class-sunset.jpeg" alt="Woman in a seated Pilates pose silhouetted against a sunset with palm trees, labelled Sunset">
+          </div>
+          <h3>Sunset</h3>
+          <p>Our signature golden-hour class on the lawn — a full-body flow as the Gold Coast sky turns pink and gold.</p>
+        </article>
 
-/* ---------- FOOTER ---------- */
-footer{
-  background:var(--green);
-  color:var(--cream);
-  padding:64px 0 40px;
-}
-footer .container{
-  display:grid;
-  grid-template-columns:1fr 2fr;
-  gap:48px;
-}
-footer .logo{ color:var(--cream); font-size:22px; }
-.footer-cols{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:32px;
-}
-.footer-cols h4{
-  font-family:'Space Mono', monospace;
-  font-size:13px;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  color:#C9B79A;
-  margin:0 0 16px;
-}
-.footer-cols li{ margin-bottom:10px; font-size:16px; }
-.footer-cols a:hover, .footer-cols a:focus-visible{ text-decoration:underline; }
-.footer-bottom{
-  max-width:var(--max-w);
-  margin:48px auto 0;
-  padding:24px 24px 0;
-  border-top:1px solid rgba(243,237,229,0.15);
-  font-size:14px;
-  color:#B9AF9E;
-}
+      </div>
+    </div>
+  </section>
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 1035px){
-  .class-grid{ grid-template-columns:repeat(2,1fr); }
-}
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-image">
+        <img src="about-image.png" alt="Woman doing a seated forward-reach mat Pilates pose on a mat labelled 'Pilates Garden' in a lush green garden">
+      </div>
+      <div class="about-text">
+        <p class="eyebrow eyebrow-center">The Pilates Garden</p>
+        <h2>ABOUT OUR PILATES STYLE</h2>
+        <p>Mat Pilates needs nothing but a mat and the ground beneath it. We take it outdoors, onto real grass, under real sky — because moving alongside nature settles the mind as much as it strengthens the body.</p>
+        <a class="btn btn-dark" href="#learn-more">Learn More</a>
+      </div>
+    </div>
+  </section>
 
-@media (max-width: 950px){
-  .about .container,
-  .location .container{ grid-template-columns:1fr; }
-  .about .about-image{
-    order:-1;
-    aspect-ratio:auto;
-    height:auto;
-    background:none;
-  }
-  .about .about-image img{
-    height:auto;
-    object-fit:contain;
-  }
-  .map-frame{ aspect-ratio:16/9; }
-}
+  <!-- LOCATION -->
+  <section class="location" id="location">
+    <div class="container">
+      <div class="location-text">
+        <p class="eyebrow">Find Us</p>
+        <h2>Location</h2>
+        <h3>Gold Coast, Australia</h3>
+        <p>We meet on the lawn at Burleigh Headland, weather permitting, with a wet-weather studio five minutes inland. Mats and props are provided — just bring water and a towel.</p>
+        <div class="btn-row">
+          <a class="btn btn-light" id="book" href="#book">Book Now</a>
+          <a class="btn btn-outline" href="#learn-more">Learn More</a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=Burleigh+Heads+Gold+Coast+Australia&output=embed"
+          title="Map showing The Pilates Garden's location near Burleigh Heads, Gold Coast"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
 
-@media (max-width: 768px){
-  .hero{ position:relative; min-height:520px; display:flex; align-items:center; overflow:hidden; }
-  .hero .container{
-    grid-template-columns:1fr;
-    min-height:auto;
-    gap:0;
-    padding:64px 24px 32px;
-  }
-  .hero-image{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    max-width:none;
-    aspect-ratio:auto;
-    border-radius:0;
-    z-index:0;
-    margin-left:0;
-  }
-  .hero-image::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(90deg, rgba(33,44,22,0.42) 0%, rgba(33,44,22,0.15) 55%, rgba(33,44,22,0) 100%);
-  }
-  .hero-content{
-    position:relative;
-    z-index:2;
-    max-width:92%;
-    text-align:left;
-    margin-left:0;
-  }
-  .hero .eyebrow,
-  .hero h1,
-  .hero .hero-sub{
-    color:#F3EDE5 !important;
-    opacity:1 !important;
-    white-space:nowrap;
-  }
-  .hero .eyebrow{ font-size:10px !important; }
-  .hero .hero-sub{ font-size:21px; }
-  .hero h1{
-    font-size:44px !important;
-    margin-bottom:-4px;
-  }
-  .hero-intro{
-    display:none;
-  }
-  .hero .btn-row{
-    margin-top:20px;
-    gap:12px;
-    flex-direction:row;
-    width:100%;
-    justify-content:center;
-  }
-  .hero .btn-row .btn{
-    width:auto;
-    text-align:center;
-    padding:16px 26px;
-    font-size:14px;
-  }
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <p class="divider-label">Contact</p>
+      <div class="contact-grid">
+        <div>
+          <h3>Email</h3>
+          <p>hello@thepilatesgarden.com.au</p>
+        </div>
+        <div>
+          <h3>Number</h3>
+          <p>+61 7 5555 0192</p>
+        </div>
+        <div>
+          <h3>Location</h3>
+          <p>Burleigh Heads, Gold Coast</p>
+        </div>
+        <div>
+          <h3>Instagram</h3>
+          <p>@thepilatesgarden</p>
+        </div>
+      </div>
+      <img src="pilates-garden-logo.png" alt="The Pilates Garden logo" class="logo-img logo-img-contact">
+    </div>
+  </section>
 
-  header.site-nav{ background:#F3EDE5 !important; }
-  .nav-toggle{ display:block; }
-  .nav-links{
-    position:absolute;
-    top:88px; left:0; right:0;
-    background:#F3EDE5 !important;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .25s ease;
-    border-bottom:1px solid rgba(33,44,22,0.08);
-  }
-  .nav-links.open{ max-height:400px; }
-  .nav-links a:not(.btn){
-    padding:18px 32px;
-    border-bottom:1px solid rgba(33,44,22,0.06);
-    width:100%;
-  }
-  .nav-links .btn{ margin:20px 32px; text-align:center; }
+</main>
 
-  .class-grid{ grid-template-columns:1fr; gap:16px; }
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <a class="logo" href="#"><img src="pilates-garden-logo.png" alt="The Pilates Garden logo" class="logo-img logo-img-footer"></a>
+    <div class="footer-cols">
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#pricing">Memberships/Pricing</a></li>
+          <li><a href="#classes">Sculpt, Sweat, Stretch, Sunset</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#learn-more">Learn More</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@thepilatesgarden.com.au">hello@thepilatesgarden.com.au</a></li>
+          <li><a href="tel:+61755550192">+61 7 5555 0192</a></li>
+          <li>Burleigh Heads, Gold Coast</li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">@thepilatesgarden</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2026 The Pilates Garden. All rights reserved.</p>
+</footer>
 
-  .contact-grid{ grid-template-columns:repeat(2,1fr); gap:40px; }
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.getElementById('primary-nav');
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    links.classList.toggle('open', !open);
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        toggle.setAttribute('aria-expanded', 'false');
+        links.classList.remove('open');
+      }
+    });
+  });
+</script>
 
-  footer .container{ grid-template-columns:1fr; }
-
-  .about h2{ font-size:24px; margin-bottom:14px; }
-  .about p{ font-size:14px; margin-bottom:20px; }
-  .about .eyebrow{ font-size:12px; margin-bottom:10px; }
-  .about .btn{ font-size:13px; padding:10px 24px; }
-}
-
-@media (max-width: 480px){
-  .hero .hero-sub{ font-size:19px; }
-  .hero .eyebrow{ font-size:9px !important; }
-  .hero h1{ font-size:40px !important; }
-  .about h2, .location h2{ font-size:32px; }
-  .btn{ padding:14px 32px; font-size:15px; }
-  .contact-grid{ grid-template-columns:1fr; gap:32px; }
-  .footer-cols{ grid-template-columns:1fr; }
-  section, .hero{ padding-top:64px; padding-bottom:64px; }
-
-  .about h2{ font-size:22px; }
-}
-
-@media (prefers-reduced-motion: reduce){
-  *{ transition:none !important; scroll-behavior:auto !important; }
-}
+</body>
+</html>
