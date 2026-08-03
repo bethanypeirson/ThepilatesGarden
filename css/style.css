@@ -209,7 +209,7 @@ header.site-nav{
   max-width:100%;
 }
 .hero-image img{ width:100%; height:100%; object-fit:cover; }
-.hero .btn{ background:#184123; color:var(--cream); }
+.hero .btn{ background:#212C16; color:var(--cream); }
 .hero .btn:hover{ background:var(--green-soft); }
 
 /* ---------- CLASSES ---------- */
@@ -417,7 +417,7 @@ footer .logo{ color:var(--cream); font-size:22px; }
     grid-template-columns:1fr;
     min-height:auto;
     gap:0;
-    padding:32px 24px;
+    padding:64px 24px 32px;
   }
   .hero-image{
     position:absolute;
@@ -447,12 +447,16 @@ footer .logo{ color:var(--cream); font-size:22px; }
     color:#F3EDE5 !important;
     opacity:1 !important;
   }
+  .hero h1{
+    margin-bottom:-4px;
+  }
   .hero .btn{
     background:#F3EDE5;
-    color:var(--green);
+    color:#212C16;
   }
 
   .nav-toggle{ display:block; }
+  header.site-nav{ background:#F3EDE5 !important; }
   .nav-links{
     position:absolute;
     top:88px; left:0; right:0;
@@ -471,7 +475,13 @@ footer .logo{ color:var(--cream); font-size:22px; }
     border-bottom:1px solid rgba(33,44,22,0.06);
     width:100%;
   }
-  .nav-links .btn{ margin:20px 32px; text-align:center; }
+  .nav-links .btn{
+    margin:20px 32px;
+    text-align:center;
+    background:#F3EDE5;
+    color:#212C16;
+    border:2px solid #212C16;
+  }
 
   .class-grid{ grid-template-columns:1fr; gap:16px; }
 
