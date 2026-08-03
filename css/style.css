@@ -459,10 +459,14 @@ footer .logo{ color:var(--cream); font-size:22px; }
   .hero .btn-row{
     margin-top:20px;
     gap:10px;
+    flex-direction:column;
+    width:100%;
   }
   .hero .btn-row .btn{
-    padding:9px 18px;
-    font-size:12px;
+    width:100%;
+    text-align:center;
+    padding:14px 18px;
+    font-size:13px;
   }
 
   header.site-nav{ background:#F3EDE5 !important; }
