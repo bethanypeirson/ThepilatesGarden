@@ -437,7 +437,7 @@ footer .logo{ color:var(--cream); font-size:22px; }
   .hero-content{
     position:relative;
     z-index:2;
-    max-width:85%;
+    max-width:92%;
     text-align:left;
     margin-left:0;
   }
@@ -446,7 +446,10 @@ footer .logo{ color:var(--cream); font-size:22px; }
   .hero .hero-sub{
     color:#F3EDE5 !important;
     opacity:1 !important;
+    white-space:nowrap;
   }
+  .hero .eyebrow{ font-size:10px; }
+  .hero .hero-sub{ font-size:16px; }
   .hero h1{
     margin-bottom:-4px;
   }
@@ -455,6 +458,11 @@ footer .logo{ color:var(--cream); font-size:22px; }
   }
   .hero .btn-row{
     margin-top:20px;
+    gap:10px;
+  }
+  .hero .btn-row .btn{
+    padding:9px 18px;
+    font-size:12px;
   }
 
   header.site-nav{ background:#F3EDE5 !important; }
@@ -485,7 +493,7 @@ footer .logo{ color:var(--cream); font-size:22px; }
 
   footer .container{ grid-template-columns:1fr; }
 
-  .hero h1{ font-size:28px; white-space:normal; }
+  .hero h1{ font-size:26px; white-space:normal; }
 
   .about h2{ font-size:24px; margin-bottom:14px; }
   .about p{ font-size:14px; margin-bottom:20px; }
@@ -494,14 +502,14 @@ footer .logo{ color:var(--cream); font-size:22px; }
 }
 
 @media (max-width: 480px){
-  .hero .hero-sub{ font-size:20px; }
+  .hero .hero-sub{ font-size:14px; }
+  .hero .eyebrow{ font-size:9px; }
+  .hero h1{ font-size:22px; }
   .about h2, .location h2{ font-size:32px; }
   .btn{ padding:14px 32px; font-size:15px; }
   .contact-grid{ grid-template-columns:1fr; gap:32px; }
   .footer-cols{ grid-template-columns:1fr; }
   section, .hero{ padding-top:64px; padding-bottom:64px; }
-
-  .hero h1{ font-size:24px; }
 
   .about h2{ font-size:22px; }
 }
