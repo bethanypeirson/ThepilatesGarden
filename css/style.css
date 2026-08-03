@@ -4,7 +4,7 @@
   --clay: #563D1A;
   --sage: #4F5F3D;
   --green-soft: #2B3820;
-  --max-w: 1320px;
+  --max-w: 1400px;
   --section-pad: 64px;
   --radius-pill: 999px;
 }
@@ -26,7 +26,7 @@ ul{ list-style:none; margin:0; padding:0; }
 .container{
   max-width:var(--max-w);
   margin:0 auto;
-  padding:0 32px;
+  padding:0 24px;
 }
 h1,h2,h3{
   font-family:'Inria Serif', serif;
@@ -171,8 +171,8 @@ header.site-nav{
   min-height:auto;
   padding-top:20px;
   padding-bottom:20px;
-  padding-left:32px;
-  padding-right:32px;
+  padding-left:24px;
+  padding-right:24px;
 }
 .hero-content{ max-width:520px; text-align:left; margin-left:2px; }
 .hero .eyebrow{ color:#184123; opacity:0.7; margin-bottom:8px; font-size:11px; font-weight:700; letter-spacing:0.15em; }
@@ -205,9 +205,10 @@ header.site-nav{
 .hero-image{
   border-radius:0;
   overflow:hidden;
-  width:600px;
-  height:350px;
-  max-width:100%;
+  width:100%;
+  max-width:600px;
+  aspect-ratio:12/7;
+  margin-left:auto;
 }
 .hero-image img{ width:100%; height:100%; object-fit:cover; }
 .hero .btn{ background:#212C16; color:var(--cream); }
@@ -385,7 +386,7 @@ footer .logo{ color:var(--cream); font-size:22px; }
 .footer-bottom{
   max-width:var(--max-w);
   margin:48px auto 0;
-  padding:24px 32px 0;
+  padding:24px 24px 0;
   border-top:1px solid rgba(243,237,229,0.15);
   font-size:14px;
   color:#B9AF9E;
@@ -425,8 +426,11 @@ footer .logo{ color:var(--cream); font-size:22px; }
     inset:0;
     width:100%;
     height:100%;
+    max-width:none;
+    aspect-ratio:auto;
     border-radius:0;
     z-index:0;
+    margin-left:0;
   }
   .hero-image::after{
     content:"";
@@ -448,7 +452,7 @@ footer .logo{ color:var(--cream); font-size:22px; }
     opacity:1 !important;
     white-space:nowrap;
   }
-  .hero .eyebrow{ font-size:5px !important; }
+  .hero .eyebrow{ font-size:10px !important; }
   .hero .hero-sub{ font-size:21px; }
   .hero h1{
     font-size:44px !important;
@@ -507,7 +511,7 @@ footer .logo{ color:var(--cream); font-size:22px; }
 
 @media (max-width: 480px){
   .hero .hero-sub{ font-size:19px; }
-  .hero .eyebrow{ font-size:4px !important; }
+  .hero .eyebrow{ font-size:9px !important; }
   .hero h1{ font-size:40px !important; }
   .about h2, .location h2{ font-size:32px; }
   .btn{ padding:14px 32px; font-size:15px; }
