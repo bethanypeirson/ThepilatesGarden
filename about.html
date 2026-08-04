@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — The Pilates Garden</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --olive-dark:#2A3320;
+    --olive:#3A4726;
+    --cream:#F2EEE3;
+    --cream-2:#EAE4D4;
+    --ink:#1F2417;
+    --muted:#6E735F;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Jost', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    letter-spacing:0.01em;
+  }
+  a{ text-decoration:none; color:inherit; }
+  img{ display:block; width:100%; height:100%; object-fit:cover; }
+
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:22px 5%;
+    background:var(--cream);
+  }
+  .logo{
+    font-family:'Cormorant Garamond', serif;
+    font-size:0.8rem;
+    line-height:1.15;
+    letter-spacing:0.04em;
+  }
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:36px;
+    font-size:0.85rem;
+    letter-spacing:0.02em;
+  }
+  .nav-right{ display:flex; align-items:center; gap:18px; }
+  .book-btn{
+    background:var(--olive-dark);
+    color:var(--cream);
+    padding:12px 26px;
+    font-size:0.8rem;
+    letter-spacing:0.03em;
+    border-radius:2px;
+  }
+  .hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    background:none;
+    border:none;
+  }
+  .hamburger span{
+    width:24px; height:1.5px; background:var(--ink); display:block;
+  }
+
+  .about-hero{
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    gap:60px;
+    padding:20px 5% 70px;
+    align-items:center;
+  }
+  .about-hero .photo{
+    aspect-ratio:4/3;
+    overflow:hidden;
+    border-radius:2px;
+  }
+  .eyebrow{
+    font-size
